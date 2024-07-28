@@ -19,12 +19,44 @@ class Note {
 }
 
 // // it generate the random color in our notes
+// int generateRandomLightColor() {
+//   Random random = Random();
+//   int red = 200 + random.nextInt(56); // 200 to 255
+//   int green = 200 + random.nextInt(56); // 200 to 255
+//   int blue = 200 + random.nextInt(56); // 200 to 255
+//   return (0xFF << 24) | (red << 16) | (green << 8) | blue;
+// }
+
 int generateRandomLightColor() {
   Random random = Random();
-  int red = 200 + random.nextInt(56); // 200 to 255
-  int green = 200 + random.nextInt(56); // 200 to 255
-  int blue = 200 + random.nextInt(56); // 200 to 255
-  return (0xFF << 24) | (red << 16) | (green << 8) | blue;
+  List<int> colors = [
+    0xFFFF8080,
+    0xFFFF9F80,
+    0xFFFFBF80,
+    0xFFFFDF80,
+    0xFFDFFF80,
+    0xFFBFFF80,
+    0xFF9FFF80,
+    0xFF80FF9F,
+    0xFF80FFBF,
+    0xFF80FFDF,
+    0xFF80FFFF,
+    0xFF80DFFF,
+    0xFF80BFFF,
+    0xFF809FFF,
+    0xFF8080FF,
+    0xFFB399FF,
+    0xFFCC99FF,
+    0xFFE699FF,
+    0xFFFF99FF,
+    0xFFFF99E6,
+    0xFFFF99CC,
+    0xFFFF99B3,
+    0xFFFF9999,
+  ];
+
+  int randomIndex = random.nextInt(colors.length);
+  return colors[randomIndex];
 }
 
 // String getGradientColor() {

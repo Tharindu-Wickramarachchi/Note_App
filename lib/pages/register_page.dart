@@ -124,18 +124,19 @@ class _RegisterPageState extends State<RegisterPage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           leading: IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 25,
+              color: Theme.of(context).colorScheme.primary,
             ),
             onPressed: () {
               Navigator.pop(context); // Go back to the previous screen
             },
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -145,10 +146,12 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       'Register',
                       style: TextStyle(
-                        color: Colors.black, //lightBlue.shade900,
+                        color: Theme.of(context)
+                            .colorScheme
+                            .primary, //lightBlue.shade900,
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
@@ -160,7 +163,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     Text(
                       'Let\'s create your account. Please enter your email and a password',
                       style: TextStyle(
-                        color: Colors.grey.shade700,
+                        color: Theme.of(context).colorScheme.secondary,
                         fontSize: 19,
                         fontWeight: FontWeight.bold,
                       ),
@@ -268,8 +271,10 @@ class _RegisterPageState extends State<RegisterPage> {
                         color: Colors.grey,
                       ),
                     ),
-                    const Text(
+                    Text(
                       ' or Login with ',
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary),
                     ),
                     Expanded(
                       child: Divider(
@@ -303,7 +308,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Text(
                     'Have an account? ',
                     style: TextStyle(
-                      color: Colors.grey.shade700,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                   GestureDetector(

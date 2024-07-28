@@ -14,7 +14,7 @@ class SignupLoginSelector extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: Column(
           children: [
             SizedBox(
@@ -25,12 +25,14 @@ class SignupLoginSelector extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(height: screenHeight * 0.10),
-                  const Text(
+                  Text(
                     'Welcome to',
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black), // Customize your text style
+                        color: Theme.of(context)
+                            .colorScheme
+                            .primary), // Customize your text style
                   ),
                   SizedBox(height: screenHeight * 0.01),
                   Image.asset(
@@ -44,16 +46,18 @@ class SignupLoginSelector extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color:
-                            Colors.grey.shade700), // Customize your text style
+                        color: Theme.of(context)
+                            .colorScheme
+                            .secondary), // Customize your text style
                   ),
                   Text(
                     'capture your knowledge',
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color:
-                            Colors.grey.shade700), // Customize your text style
+                        color: Theme.of(context)
+                            .colorScheme
+                            .secondary), // Customize your text style
                   ),
                 ],
               ),

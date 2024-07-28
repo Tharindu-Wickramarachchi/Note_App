@@ -57,8 +57,9 @@ dependencies:
   intl: ^0.19.0
   flutter_quill: ^9.4.5
   quill_html_editor: ^2.2.8
-  
   flutter_html: ^3.0.0-beta.2
+  shared_preferences: ^2.2.3
+  flutter_switch: ^0.3.2
 
   #Run commands to app icon
   # 1) flutter pub get
@@ -107,6 +108,8 @@ flutter:
     - assets/images/Google_icon.png
     - assets/images/email_icon.png
     - assets/images/question_mark_logo.png
+    - assets/images/row_icon.png
+    - assets/images/grid_icon.png
 
     #Animation
     - assets/animations/loader.json

@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:note/models/theme_provider.dart';
 import 'package:note/pages/authentication_page.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   try {
@@ -14,24 +16,29 @@ void main() async {
         projectId: 'note-application-495c4',
       ),
     );
-    runApp(const MyApp());
   } catch (e) {
     if (kDebugMode) {
       print("Failed to initialize Firebase: $e");
     }
   }
-  runApp(const MyApp());
+
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AuthPage(),
+      home: const AuthPage(),
+      theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }

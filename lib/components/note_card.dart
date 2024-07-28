@@ -25,7 +25,7 @@ class NoteCard extends StatelessWidget {
           color: Color(note.color),
           border: Border.all(
             color: Colors.black, // Border color
-            width: 0.8, // Border width
+            width: 0.6, // Border width
           ),
           borderRadius: BorderRadius.circular(10),
         ),
@@ -37,7 +37,7 @@ class NoteCard extends StatelessWidget {
           color: Colors
               .transparent, // Make the card transparent to see the gradient
           child: Padding(
-            padding: const EdgeInsets.all(6),
+            padding: const EdgeInsets.all(5),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -51,7 +51,7 @@ class NoteCard extends StatelessWidget {
                           style: {
                             'body': Style(
                               color: Colors.black,
-                              fontSize: FontSize(13),
+                              fontSize: FontSize(10),
                             ),
                           },
                         ),
@@ -67,8 +67,8 @@ class NoteCard extends StatelessWidget {
                       formattedDateTime,
                       style: const TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 11,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 10.5,
                       ),
                     ),
                   ],

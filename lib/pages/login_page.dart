@@ -103,18 +103,19 @@ class _LoginPageState extends State<LoginPage> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           leading: IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 25,
+              color: Theme.of(context).colorScheme.primary,
             ),
             onPressed: () {
               Navigator.pop(context); // Go back to the previous screen
             },
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -132,10 +133,12 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       'Log In',
                       style: TextStyle(
-                        color: Colors.black, //lightBlue.shade900,
+                        color: Theme.of(context)
+                            .colorScheme
+                            .primary, //lightBlue.shade900,
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
@@ -151,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
                     Text(
                       'Welcome Back, You have been missed. Pleace enter your Email and Password.',
                       style: TextStyle(
-                        color: Colors.grey.shade700,
+                        color: Theme.of(context).colorScheme.secondary,
                         fontSize: 19,
                         fontWeight: FontWeight.bold,
                       ),
@@ -265,8 +268,11 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.grey,
                       ),
                     ),
-                    const Text(
+                    Text(
                       ' or Login with ',
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary,
+                      ),
                     ),
                     Expanded(
                       child: Divider(
@@ -300,7 +306,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text(
                     'Don\'t have an account?',
                     style: TextStyle(
-                      color: Colors.grey.shade700,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                   GestureDetector(
