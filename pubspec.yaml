@@ -105,11 +105,14 @@ flutter:
   assets:
     - assets/images/Note_App_Logo.png
     - assets/images/Note_Logo.png
+    - assets/images/Note_Logo_Name.png
     - assets/images/Google_icon.png
     - assets/images/email_icon.png
     - assets/images/question_mark_logo.png
     - assets/images/row_icon.png
     - assets/images/grid_icon.png
+    - assets/images/logout_icon.png
+    - assets/images/forgot_password_image.png
 
     #Animation
     - assets/animations/loader.json

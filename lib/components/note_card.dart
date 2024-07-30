@@ -14,7 +14,7 @@ class NoteCard extends StatelessWidget {
     DateTime displayTime = note.updatedAt.isAfter(note.createdAt)
         ? note.updatedAt
         : note.createdAt;
-    // display format
+    // Time / Date display format
     String formattedDateTime =
         DateFormat('h:mma MMMM d, y').format(displayTime);
 
@@ -24,8 +24,8 @@ class NoteCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Color(note.color),
           border: Border.all(
-            color: Colors.black, // Border color
-            width: 0.6, // Border width
+            color: Colors.black,
+            width: 0.6,
           ),
           borderRadius: BorderRadius.circular(10),
         ),
@@ -33,9 +33,8 @@ class NoteCard extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          elevation: 0, // Remove shadow to see the gradient better
-          color: Colors
-              .transparent, // Make the card transparent to see the gradient
+          elevation: 0,
+          color: Colors.transparent,
           child: Padding(
             padding: const EdgeInsets.all(5),
             child: Column(

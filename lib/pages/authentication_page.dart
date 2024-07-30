@@ -36,12 +36,6 @@ class _AuthPageState extends State<AuthPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      // body: Center(
-      //   child:
-      //       Show a loading indicator while waiting for the auth state
-      //       CircularProgressIndicator(), 
-      // ),
-    );
+    return const Scaffold();
   }
 }

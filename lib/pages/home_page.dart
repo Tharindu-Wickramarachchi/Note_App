@@ -3,11 +3,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:note/components/note_card.dart';
 import 'package:note/models/note_model.dart';
 import 'package:note/models/theme.dart';
 import 'package:note/pages/note_screen.dart';
 import 'package:note/pages/signUp_logIn_selector.dart';
+import 'package:note/pages/user_profile_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:provider/provider.dart';
@@ -152,12 +154,12 @@ class _HomePageState extends State<HomePage> {
           children: [
             Expanded(
               child: Text(
-                'N O T E S',
+                'N O T E',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Theme.of(context).colorScheme.primary,
-                  fontSize: 30,
+                  fontSize: 35,
                 ),
               ),
             ),
@@ -178,11 +180,11 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       drawer: Drawer(
-        backgroundColor: Theme.of(context).colorScheme.surface,
+        backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
         child: Column(
           children: [
             Container(
-              color: const Color.fromARGB(255, 0, 16, 109),
+              color: const Color.fromARGB(255, 0, 8, 100),
               alignment: Alignment.center,
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: Row(
@@ -190,14 +192,25 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(
-                      left: 10,
-                      top: 15,
+                      left: 15,
+                      top: 20,
                       bottom: 10,
                     ),
                     child: Image.asset(
                       'assets/images/Note_App_Logo.png',
                       height: 80,
                       width: 80,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 15,
+                      left: 10,
+                    ),
+                    child: Image.asset(
+                      'assets/images/Note_Logo_Name.png',
+                      height: 60,
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -236,18 +249,15 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ],
-                  Padding(
-                    padding: const EdgeInsets.only(right: 0),
-                    child: IconButton(
-                      icon: const Icon(
-                        Icons.keyboard_arrow_left,
-                        color: Colors.white,
-                        size: 40,
-                      ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
+                  IconButton(
+                    icon: Icon(
+                      Icons.keyboard_arrow_left,
+                      color: Colors.blue[500],
+                      size: 45,
                     ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                   ),
                 ],
               ),
@@ -255,55 +265,190 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: ListView(
                 children: [
-                  ListTile(
-                    leading: const Icon(Icons.logout),
-                    title: const Text('Log Out'),
-                    onTap: () => _logOut(context),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 0, left: 8, bottom: 8, right: 8),
+                    child: ListTile(
+                      leading: Image.asset(
+                        'assets/images/logout_icon.png',
+                        width: 30,
+                        height: 30,
+                      ),
+                      title: const Text(
+                        'Log Out',
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                      onTap: () => _logOut(context),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(
+                          color: Colors.blue.shade800,
+                          width: 1.5,
+                        ),
+                      ),
+                    ),
                   ),
-                  ListTile(
-                    leading: const Icon(Icons.settings),
-                    title: const Text('Profile Settings'),
-                    onTap: () {
-                      // Add profile settings functionality here
-                    },
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 8, left: 8, bottom: 8, right: 8),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.account_circle,
+                        color: Colors.blue[500],
+                        size: 30,
+                      ),
+                      title: const Text(
+                        'User Profile',
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => UserProfilePage(
+                              userEmail: userEmail ?? '',
+                              noteCount: noteCount,
+                            ),
+                          ),
+                        );
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(
+                          color: Colors.blue.shade800,
+                          width: 1.5,
+                        ),
+                      ),
+                    ),
                   ),
-                  ListTile(
-                    leading:
-                        Icon(isSingleColumn ? Icons.grid_on : Icons.view_list),
-                    title: Text(isSingleColumn
-                        ? 'Switch to Grid View'
-                        : 'Switch to List View'),
-                    onTap: () {
-                      setState(() {
-                        isSingleColumn = !isSingleColumn;
-                        _saveLayoutState();
-                      });
-                    },
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Container(
+                      height: MediaQuery.of(context).size.height * 0.072,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.blue.shade800,
+                          width: 1.5,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                width:
+                                    MediaQuery.of(context).size.width * 0.045,
+                              ),
+                              Icon(
+                                Icons.palette_outlined,
+                                color: Colors.blue[500],
+                                size: 30,
+                              ),
+                              SizedBox(
+                                width:
+                                    MediaQuery.of(context).size.width * 0.044,
+                              ),
+                              const Text(
+                                'Theme',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 15),
+                            child: FlutterSwitch(
+                              width: MediaQuery.of(context).size.width * 0.23,
+                              height:
+                                  MediaQuery.of(context).size.height * 0.040,
+                              valueFontSize: 12,
+                              value: themeProvider.themeData == darkMode,
+                              borderRadius: 30,
+                              padding: 4,
+                              showOnOff: true,
+                              inactiveColor:
+                                  const Color.fromARGB(255, 0, 30, 170),
+                              activeColor: Colors.blue.shade300,
+                              inactiveText: 'Dark',
+                              activeText: 'Light',
+                              inactiveTextColor: Colors.blue.shade50,
+                              activeTextColor: Colors.black,
+                              inactiveToggleColor: Colors.blue.shade300,
+                              activeToggleColor: Colors.yellow.shade700,
+                              onToggle: (val) {
+                                themeProvider.toggleTheme();
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 8, left: 8, bottom: 8, right: 8),
+                    child: ListTile(
+                      leading: Image.asset(
+                        isSingleColumn
+                            ? 'assets/images/grid_icon.png'
+                            : 'assets/images/row_icon.png',
+                        width: 24,
+                        height: 24,
+                      ),
+                      title: Text(isSingleColumn
+                          ? 'Switch to Grid View'
+                          : 'Switch to List View'),
+                      onTap: () {
+                        setState(() {
+                          isSingleColumn = !isSingleColumn;
+                          _saveLayoutState();
+                        });
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(
+                          color: Colors.blue.shade800,
+                          width: 1.5,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 8, left: 8, bottom: 8, right: 8),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.exit_to_app,
+                        color: Colors.blue[500],
+                        size: 30,
+                      ),
+                      title: const Text(
+                        'Exit App',
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                      onTap: () {
+                        // Exit the application
+                        SystemNavigator.pop();
+                      },
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(
+                          color: Colors.blue.shade800,
+                          width: 1.5,
+                        ),
+                      ),
+                    ),
+                  )
                 ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: FlutterSwitch(
-                width: MediaQuery.of(context).size.width * 0.18,
-                height: MediaQuery.of(context).size.height * 0.035,
-                valueFontSize: 12,
-                value: themeProvider.themeData == darkMode,
-                borderRadius: 30,
-                padding: 3.5,
-                showOnOff: true,
-                inactiveColor: Colors.grey.shade800,
-                activeColor: Colors.blue.shade200,
-                inactiveText: 'Dark',
-                activeText: 'Light',
-                inactiveTextColor: Colors.white,
-                activeTextColor: Colors.black,
-                inactiveToggleColor: Colors.grey.shade300,
-                activeToggleColor: Colors.yellow.shade800,
-                onToggle: (val) {
-                  themeProvider.toggleTheme();
-                },
               ),
             ),
           ],

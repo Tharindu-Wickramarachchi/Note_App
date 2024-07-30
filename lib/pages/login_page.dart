@@ -5,6 +5,7 @@ import 'package:note/components/gradient_button.dart';
 import 'package:note/components/normal_textfield.dart';
 import 'package:note/components/square_tile.dart';
 import 'package:note/components/visibility_textfield.dart';
+import 'package:note/pages/forgot_password_page.dart';
 import 'package:note/pages/home_page.dart';
 import 'package:note/pages/register_page.dart';
 import 'package:note/services/google_login.dart';
@@ -39,7 +40,6 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     try {
-      //UserCredential userCredential =
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text,
         password: passwordController.text,
@@ -47,6 +47,7 @@ class _LoginPageState extends State<LoginPage> {
 
       // Navigate to HomePage after successful sign-in
       Navigator.pushAndRemoveUntil(
+        // ignore: use_build_context_synchronously
         context,
         MaterialPageRoute(builder: (context) => const HomePage()),
         (Route<dynamic> route) => false,
@@ -61,6 +62,7 @@ class _LoginPageState extends State<LoginPage> {
         print("Exception code : ${e.code}");
       }
       //pop the loading circle
+      // ignore: use_build_context_synchronously
       Navigator.pop(context);
 
       //invalid user
@@ -88,7 +90,6 @@ class _LoginPageState extends State<LoginPage> {
     setState(() {});
   }
 
-//class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -119,17 +120,11 @@ class _LoginPageState extends State<LoginPage> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                  //color: Colors.red, // Set the color for the SizedBox
-                  // child: SizedBox(
-                  //   height: screenHeight * 0.04, // Set the height dynamically
-                  //   width: screenWidth,
-                  // ),
-                  ),
+              
               SizedBox(
                 height: screenHeight * 0.28,
                 width: screenWidth * 0.85,
-                //color: Colors.amber,
+                
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -138,18 +133,14 @@ class _LoginPageState extends State<LoginPage> {
                       style: TextStyle(
                         color: Theme.of(context)
                             .colorScheme
-                            .primary, //lightBlue.shade900,
+                            .primary, 
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Container(
-                      //color: Colors.red, // Set the color for the SizedBox
-                      child: SizedBox(
-                        height:
-                            screenHeight * 0.04, // Set the height dynamically
-                        width: screenWidth,
-                      ),
+                    SizedBox(
+                      height: screenHeight * 0.04,
+                      width: screenWidth,
                     ),
                     Text(
                       'Welcome Back, You have been missed. Pleace enter your Email and Password.',
@@ -160,14 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       textAlign: TextAlign.justify,
                     ),
-                    // Text(
-                    //   'Pleace Enter Your Email And Password',
-                    //   style: TextStyle(
-                    //     color: Theme.of(context).colorScheme.secondary,
-                    //     fontSize: 20,
-                    //     fontWeight: FontWeight.bold,
-                    //   ),
-                    // ),
+                    
                   ],
                 ),
               ),
@@ -200,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
                 hintText: 'Enter your password',
                 obscureText: true,
                 color: color,
-                //obscureText: passwordVisibility,
+                
               ),
 
               // Displaying Password Error
@@ -227,7 +211,11 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        // Handle forgot password
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ForgotPassword()),
+                        );
                       },
                       child: const Text(
                         'Forgot password?',
@@ -241,12 +229,9 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
               ),
-              Container(
-                //color: Colors.red, // Set the color for the SizedBox
-                child: SizedBox(
-                  height: screenHeight * 0.04, // Set the height dynamically
-                  width: screenWidth,
-                ),
+              SizedBox(
+                height: screenHeight * 0.04, 
+                width: screenWidth,
               ),
 
               GradientButton(
@@ -255,7 +240,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
 
               SizedBox(
-                height: screenHeight * 0.04, // Set the height dynamically
+                height: screenHeight * 0.04, 
                 width: screenWidth,
               ),
               Padding(
@@ -285,7 +270,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
 
               SizedBox(
-                height: screenHeight * 0.03, // Set the height dynamically
+                height: screenHeight * 0.03,
                 width: screenWidth,
               ),
 
@@ -296,7 +281,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
 
               SizedBox(
-                height: screenHeight * 0.03, // Set the height dynamically
+                height: screenHeight * 0.03,
                 width: screenWidth,
               ),
 
@@ -316,7 +301,7 @@ class _LoginPageState extends State<LoginPage> {
                         MaterialPageRoute(
                             builder: (context) => const RegisterPage()),
                       );
-                    }, //widget.onTap,
+                    },
                     child: const Text(
                       ' Register Now',
                       style: TextStyle(

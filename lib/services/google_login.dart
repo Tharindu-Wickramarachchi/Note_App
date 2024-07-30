@@ -27,6 +27,7 @@ Future<UserCredential?> signInWithGoogle(BuildContext context) async {
     );
 
     showDialog(
+      // ignore: use_build_context_synchronously
       context: context,
       builder: (context) {
         return const Center(

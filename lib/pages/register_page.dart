@@ -41,13 +41,13 @@ class _RegisterPageState extends State<RegisterPage> {
     if (emailController.text.isNotEmpty) {
       try {
         if (passwordController.text == confirmpasswordController.text) {
-          //UserCredential userCredential =
+          
           await FirebaseAuth.instance.createUserWithEmailAndPassword(
             email: emailController.text,
             password: passwordController.text,
           );
 
-          // // Navigate to HomePage after successful sign-in
+          // Navigate to HomePage after successful sign-in
           Navigator.pushAndRemoveUntil(
             // ignore: use_build_context_synchronously
             context,
@@ -79,11 +79,11 @@ class _RegisterPageState extends State<RegisterPage> {
           emailError = 'Invalid credentials, Please check your email.';
           passwordError = 'Invalid credentials, Please check your password.';
 
-          //   //Display error to user
+          //Display error to user
         } else if (e.code == 'invalid-email') {
           emailError = 'Invalid email, Please check your email.';
           passwordError = 'Invalid email, Please check your password.';
-          //   //Display error to user
+          //Display error to user
         } else if (e.code == 'channel-error') {
           //No email and passwords
           emailError = 'Empty credentials, Please enter your email.';
@@ -109,7 +109,6 @@ class _RegisterPageState extends State<RegisterPage> {
     }
   }
 
-//class _LoginPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -151,13 +150,13 @@ class _RegisterPageState extends State<RegisterPage> {
                       style: TextStyle(
                         color: Theme.of(context)
                             .colorScheme
-                            .primary, //lightBlue.shade900,
+                            .primary, 
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(
-                      height: screenHeight * 0.01, // Set the height dynamically
+                      height: screenHeight * 0.01,
                       width: screenWidth,
                     ),
                     Text(
@@ -201,7 +200,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 hintText: 'Enter your password',
                 obscureText: true,
                 color: color,
-                //obscureText: passwordVisibility,
               ),
 
               // Displaying Password Error
@@ -227,7 +225,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 hintText: 'Enter confirmation password',
                 obscureText: true,
                 color: color,
-                //obscureText: passwordVisibility,
               ),
               // Displaying Password Error
               Container(
@@ -248,7 +245,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
 
               SizedBox(
-                height: screenHeight * 0.02, // Set the height dynamically
+                height: screenHeight * 0.02,
                 width: screenWidth,
               ),
 
@@ -258,7 +255,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
 
               SizedBox(
-                height: screenHeight * 0.03, // Set the height dynamically
+                height: screenHeight * 0.03, 
                 width: screenWidth,
               ),
               Padding(
@@ -287,7 +284,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
 
               SizedBox(
-                height: screenHeight * 0.03, // Set the height dynamically
+                height: screenHeight * 0.03, 
                 width: screenWidth,
               ),
 
@@ -298,7 +295,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
 
               SizedBox(
-                height: screenHeight * 0.03, // Set the height dynamically
+                height: screenHeight * 0.03, 
                 width: screenWidth,
               ),
 
@@ -318,7 +315,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         MaterialPageRoute(
                             builder: (context) => const LoginPage()),
                       );
-                    }, //widget.onTap,
+                    }, 
                     child: const Text(
                       ' Login Now',
                       style: TextStyle(

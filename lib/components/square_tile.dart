@@ -33,13 +33,13 @@ class SquareTile extends StatelessWidget {
             ),
             SizedBox(
                 width: MediaQuery.of(context).size.width *
-                    0.05), // Adjust the width as needed for spacing
+                    0.05), 
             Text(
               imageText,
               style: TextStyle(
                 color: Colors.grey.shade500,
-                fontSize: 18, // Adjust the font size as needed
-                fontWeight: FontWeight.w500, // Adjust the font weight as needed
+                fontSize: 18, 
+                fontWeight: FontWeight.w500, 
               ),
             ),
           ],

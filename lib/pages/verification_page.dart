@@ -42,7 +42,7 @@ class _VerificationPageState extends State<VerificationPage> {
   Future checkEmailVerified() async {
     await FirebaseAuth.instance.currentUser!.reload();
 
-    if (!mounted) return; // Check if the widget is still mounted
+    if (!mounted) return;
 
     setState(() {
       isEmailVerified = FirebaseAuth.instance.currentUser!.emailVerified;
@@ -51,32 +51,6 @@ class _VerificationPageState extends State<VerificationPage> {
     if (isEmailVerified) timer?.cancel();
   }
 
-  // Future sendVerificationEmail() async {
-  //   try {
-  //     final user = FirebaseAuth.instance.currentUser!;
-  //     await user.sendEmailVerification();
-  //     if (kDebugMode) {
-  //       print(
-  //           '----------------------------------------------------------------');
-  //       print('email => ${user.email}');
-  //       print(
-  //           '----------------------------------------------------------------');
-  //     }
-
-  //     if (!mounted) return; // Check if the widget is still mounted
-
-  //     setState(() => canResendEmail = false);
-  //     await Future.delayed(const Duration(seconds: 60));
-
-  //     if (!mounted) return; // Check if the widget is still mounted
-
-  //     setState(() => canResendEmail = true);
-  //   } catch (e) {
-  //     if (kDebugMode) {
-  //       print('Send verification email error : $e');
-  //     }
-  //   }
-  // }
   Future sendVerificationEmail() async {
     try {
       final user = FirebaseAuth.instance.currentUser!;
@@ -117,9 +91,9 @@ class _VerificationPageState extends State<VerificationPage> {
 
   @override
   Widget build(BuildContext context) => isEmailVerified
-      ? HomePage()
+      ? const HomePage()
       : Scaffold(
-          backgroundColor: Colors.white,
+          backgroundColor: Theme.of(context).colorScheme.surface,
           body: Padding(
             padding: const EdgeInsets.all(20),
             child: Column(
@@ -133,23 +107,23 @@ class _VerificationPageState extends State<VerificationPage> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
-                const Text(
+                Text(
                   'Please Verify your Email',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
-                const Text(
+                Text(
                   'Verification email has been sent to',
                   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -158,32 +132,32 @@ class _VerificationPageState extends State<VerificationPage> {
                 ),
                 Text(
                   '${FirebaseAuth.instance.currentUser!.email}', // Displaying user's email
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
-                const Text(
+                Text(
                   'Click on the link to complete the verification process',
                   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
-                const Text(
+                Text(
                   'Wait 60 seconds to get new verification email',
                   style: TextStyle(
                     fontSize: 14,
-                    color: Colors.black,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -194,40 +168,30 @@ class _VerificationPageState extends State<VerificationPage> {
                   height: MediaQuery.of(context).size.height * 0.07,
                   width: MediaQuery.of(context).size.width * 0.85,
                   decoration: BoxDecoration(
-                    // gradient: const LinearGradient(
-                    //   colors: [
-                    //     Color.fromARGB(255, 0, 80, 255), // Blue 1
-                    //     Color.fromARGB(255, 0, 120, 255), // Blue 2
-                    //     Color.fromARGB(255, 0, 180, 255), // Blue 3
-                    //     Color.fromARGB(255, 0, 220, 255), // Blue 4
-                    //   ],
-                    //   begin: Alignment.topLeft,
-                    //   end: Alignment.bottomRight,
-                    // ),
                     gradient: canResendEmail
                         ? const LinearGradient(
                             colors: [
-                              Color.fromARGB(255, 0, 80, 255), // Blue 1
-                              Color.fromARGB(255, 0, 120, 255), // Blue 2
-                              Color.fromARGB(255, 0, 180, 255), // Blue 3
-                              Color.fromARGB(255, 0, 220, 255), // Blue 4
+                              Color.fromARGB(255, 0, 80, 255),
+                              Color.fromARGB(255, 0, 120, 255),
+                              Color.fromARGB(255, 0, 180, 255),
+                              Color.fromARGB(255, 0, 220, 255),
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           )
                         : const LinearGradient(
                             colors: [
-                              Color.fromARGB(255, 100, 100, 100), // Blue 1
-                              Color.fromARGB(255, 150, 150, 150), // Blue 2
-                              Color.fromARGB(255, 200, 200, 200), // Blue 3
-                              Color.fromARGB(255, 250, 250, 250), // Blue 4
+                              Color.fromARGB(255, 100, 100, 100),
+                              Color.fromARGB(255, 150, 150, 150),
+                              Color.fromARGB(255, 200, 200, 200),
+                              Color.fromARGB(255, 250, 250, 250),
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),
                     border: Border.all(
-                      color: Colors.black, // Border color
-                      width: 0.5, // Border width
+                      color: Colors.black,
+                      width: 0.5,
                     ),
                     borderRadius: BorderRadius.circular(5),
                   ),
@@ -237,12 +201,10 @@ class _VerificationPageState extends State<VerificationPage> {
                         MediaQuery.of(context).size.width * 0.85,
                         MediaQuery.of(context).size.height * 0.07,
                       ),
-                      backgroundColor: Colors
-                          .transparent, // Make the button background transparent
-                      shadowColor: Colors.transparent, // Remove button shadow
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            5), // Match the container's border radius
+                        borderRadius: BorderRadius.circular(5),
                       ),
                     ),
                     icon: const Icon(
@@ -269,17 +231,17 @@ class _VerificationPageState extends State<VerificationPage> {
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [
-                        Color.fromARGB(255, 0, 80, 255), // Blue 1
-                        Color.fromARGB(255, 0, 120, 255), // Blue 2
-                        Color.fromARGB(255, 0, 180, 255), // Blue 3
-                        Color.fromARGB(255, 0, 220, 255), // Blue 4
+                        Color.fromARGB(255, 0, 80, 255),
+                        Color.fromARGB(255, 0, 120, 255),
+                        Color.fromARGB(255, 0, 180, 255),
+                        Color.fromARGB(255, 0, 220, 255),
                       ],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
                     border: Border.all(
-                      color: Colors.black, // Border color
-                      width: 0.5, // Border width
+                      color: Colors.black,
+                      width: 0.5,
                     ),
                     borderRadius: BorderRadius.circular(5),
                   ),
@@ -289,12 +251,10 @@ class _VerificationPageState extends State<VerificationPage> {
                         MediaQuery.of(context).size.width * 0.85,
                         MediaQuery.of(context).size.height * 0.07,
                       ),
-                      backgroundColor: Colors
-                          .transparent, // Make the button background transparent
-                      shadowColor: Colors.transparent, // Remove button shadow
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            5), // Match the container's border radius
+                        borderRadius: BorderRadius.circular(5),
                       ),
                     ),
                     icon: const Icon(

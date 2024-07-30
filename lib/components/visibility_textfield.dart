@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class VisibilityTextField extends StatefulWidget {
   final TextEditingController controller;
   final String hintText;
   final bool obscureText;
-  final Color color; // This is your color property
+  final Color color; 
 
   const VisibilityTextField({
     Key? key,
     required this.controller,
     required this.hintText,
     required this.obscureText,
-    required this.color, // Ensure this is passed correctly
+    required this.color, 
   }) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _VisibilityTextFieldState createState() => _VisibilityTextFieldState();
 }
 
@@ -50,7 +50,7 @@ class _VisibilityTextFieldState extends State<VisibilityTextField> {
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: widget.color, // Correctly reference the color property
+              color: widget.color, 
               width: 1.5,
             ),
           ),

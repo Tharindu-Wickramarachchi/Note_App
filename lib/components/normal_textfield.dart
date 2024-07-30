@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Normaltextfield extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final controller;
   final String hintText;
   final bool obscureText;
@@ -41,6 +42,9 @@ class Normaltextfield extends StatelessWidget {
           hintStyle: const TextStyle(
             color: Colors.black,
           ),
+        ),
+        style: const TextStyle(
+          color: Colors.black,
         ),
       ),
     );
