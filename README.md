@@ -1,16 +1,73 @@
-# note
+# NOTE
 
-A new Flutter project.
+  <br>
+  <img align="left" src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/images/Note_App_Logo.png" alt="Note app logo" width="120" style="margin-right: 10px;">
+   Note is a note-taking application developed using Flutter and powered by Firebase. Keep your thoughts, ideas, and important information organized with ease. Featuring a user-friendly interface and seamless synchronization, Note application ensures your notes are always accessible and up-to-date on your Android device.
+  <br>
+   
+##
+  <br>
+  
+## Application User Interface
 
-## Getting Started
+  <p align="center" width="100%">
+  <p>Light Mode</p>
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_1.jpg" alt="Screenshot-1" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_2.jpg" alt="Screenshot-2" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_3.jpg" alt="Screenshot-3" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_3.2.jpg" alt="Screenshot-3.2" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_4.jpg" alt="Screenshot-4" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_5.jpg" alt="Screenshot-5" width="100">
+  </p>
+  
+  <p align="center" width="100%">   
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_6.jpg" alt="Screenshot-6" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_7.jpg" alt="Screenshot-7" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_8.jpg" alt="Screenshot-8" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_9.jpg" alt="Screenshot-9" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_10.jpg" alt="Screenshot-10" width="100">
+  </p>
 
-This project is a starting point for a Flutter application.
+  <br>
 
-A few resources to get you started if this is your first Flutter project:
+  <p align="center" width="100%">
+  <p>Dark Mode</p>
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_11.jpg" alt="Screenshot-11" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_12.jpg" alt="Screenshot-12" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_12.2.jpg" alt="Screenshot-12.2" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_13.jpg" alt="Screenshot-13" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_14.jpg" alt="Screenshot-14" width="100">
+  </p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  <p>Dark Mode</p>
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_15.jpg" alt="Screenshot-15" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_16.jpg" alt="Screenshot-16" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_17.jpg" alt="Screenshot-17" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_18.jpg" alt="Screenshot-18" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_19.jpg" alt="Screenshot-19" width="100">
+  </p>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  <br>
+
+## Note Application Demonstration
+
+<p align="center">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/vedios/Note_app_demo.mp4" alt="Weather_App_Demo">
+</p>
+
+  
+<!-- ## API Docs
+
+  <p>This project uses the OpenWeatherMap API </p>
+  <p>API used in this project: One Call API 3.0</p> 
+
+  <br>
+  
+## Features
+
+  <p>◉ Automatically acquire user current location.</p>
+  <p>◉ Provide the current weather condition of the location.</p>
+  <p>◉ Provide additional weather data such as humidity, wind speed, and visibility distance.</p>
+  <p>◉ Application support light and dark mode</p>
+
+  <br> -->
