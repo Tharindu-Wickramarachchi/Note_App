@@ -11,49 +11,49 @@
 ## Application User Interface
 
   <p align="center" width="100%">
-  <p>Light Mode</p>
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_1.jpg" alt="Screenshot-1" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_2.jpg" alt="Screenshot-2" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_3.jpg" alt="Screenshot-3" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_3.2.jpg" alt="Screenshot-3.2" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_4.jpg" alt="Screenshot-4" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_5.jpg" alt="Screenshot-5" width="100">
+  Light Mode
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_1.jpg" alt="Screenshot-1" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_2.jpg" alt="Screenshot-2" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_3.jpg" alt="Screenshot-3" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_3.2.jpg" alt="Screenshot-3.2" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_4.jpg" alt="Screenshot-4" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_5.jpg" alt="Screenshot-5" width="140">
   </p>
   
   <p align="center" width="100%">   
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_6.jpg" alt="Screenshot-6" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_7.jpg" alt="Screenshot-7" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_8.jpg" alt="Screenshot-8" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_9.jpg" alt="Screenshot-9" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_10.jpg" alt="Screenshot-10" width="100">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_6.jpg" alt="Screenshot-6" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_7.jpg" alt="Screenshot-7" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_8.jpg" alt="Screenshot-8" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_9.jpg" alt="Screenshot-9" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_10.jpg" alt="Screenshot-10" width="140">
   </p>
 
   <br>
 
   <p align="center" width="100%">
-  <p>Dark Mode</p>
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_11.jpg" alt="Screenshot-11" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_12.jpg" alt="Screenshot-12" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_12.2.jpg" alt="Screenshot-12.2" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_13.jpg" alt="Screenshot-13" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_14.jpg" alt="Screenshot-14" width="100">
+  Dark Mode
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_11.jpg" alt="Screenshot-11" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_12.jpg" alt="Screenshot-12" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_12.2.jpg" alt="Screenshot-12.2" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_13.jpg" alt="Screenshot-13" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_14.jpg" alt="Screenshot-14" width="140">
   </p>
 
-  <p>Dark Mode</p>
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_15.jpg" alt="Screenshot-15" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_16.jpg" alt="Screenshot-16" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_17.jpg" alt="Screenshot-17" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_18.jpg" alt="Screenshot-18" width="100">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_19.jpg" alt="Screenshot-19" width="100">
+  <p align="center" width="100%">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_15.jpg" alt="Screenshot-15" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_16.jpg" alt="Screenshot-16" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_17.jpg" alt="Screenshot-17" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_18.jpg" alt="Screenshot-18" width="140">
+  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_19.jpg" alt="Screenshot-19" width="140">
   </p>
 
   <br>
 
 ## Note Application Demonstration
 
-<p align="center">
-  <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/vedios/Note_app_demo.mp4" alt="Weather_App_Demo">
-</p>
+https://github.com/user-attachments/assets/8e9903a1-3d7d-483a-8654-9852b9d60c7f
+
+
 
   
 <!-- ## API Docs
