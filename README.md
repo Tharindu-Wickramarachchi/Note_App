@@ -10,7 +10,7 @@
   
 ## Application User Interface
 
-  ##Light Mode
+##Light Mode
   <p align="center" width="100%">  
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_1.jpg" alt="Screenshot-1" width="140">
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_2.jpg" alt="Screenshot-2" width="140">
@@ -30,7 +30,7 @@
 
   <br>
 
-  ##Dark Mode
+##Dark Mode
   <p align="center" width="100%">  
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_11.jpg" alt="Screenshot-11" width="140">
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_12.jpg" alt="Screenshot-12" width="140">
