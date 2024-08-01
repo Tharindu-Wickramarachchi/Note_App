@@ -10,9 +10,11 @@
   
 ## Application User Interface
 
-## Light Mode
+### Light Mode
   <p align="center" width="100%">  
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_1.jpg" alt="Screenshot-1" width="140">
+  </p>
+  <p align="center" width="100%">  
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_2.jpg" alt="Screenshot-2" width="140">
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_3.jpg" alt="Screenshot-3" width="140">
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_3.2.jpg" alt="Screenshot-3.2" width="140">
@@ -30,7 +32,7 @@
 
   <br>
 
-## Dark Mode
+### Dark Mode
   <p align="center" width="100%">  
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_11.jpg" alt="Screenshot-11" width="140">
   <img src="https://github.com/Tharindu-Wickramarachchi/Note_App/blob/main/assets/screenshots/Screenshot_12.jpg" alt="Screenshot-12" width="140">
@@ -53,21 +55,79 @@
 
 https://github.com/user-attachments/assets/8e9903a1-3d7d-483a-8654-9852b9d60c7f
 
+<br>
 
+## Application Features
 
-  
-<!-- ## API Docs
+<br>
 
-  <p>This project uses the OpenWeatherMap API </p>
-  <p>API used in this project: One Call API 3.0</p> 
+### User Authentication
 
-  <br>
-  
-## Features
+ <p>Email and Password Registration</p>
+  <p> ◉ Create an account using email and password.</p>
+  <p> ◉ Receive a verification email to confirm account validity.</p>
 
-  <p>◉ Automatically acquire user current location.</p>
-  <p>◉ Provide the current weather condition of the location.</p>
-  <p>◉ Provide additional weather data such as humidity, wind speed, and visibility distance.</p>
-  <p>◉ Application support light and dark mode</p>
+ <br>
 
-  <br> -->
+ <p>Google Login</p>
+  <p> ◉ Log in quickly using a Google account.</p>
+
+<br>
+
+ <p>Password Recovery</p>
+  <p> ◉ Reset password using the "Forgot Password" option on the login page.</p>
+
+<br>
+
+### Notes Management
+
+ <p>Create Notes</p>
+  <p> ◉ Easily create and save new notes to Firebase.</p>
+
+<br>
+
+ <p>Update Notes</p>
+  <p> ◉ Edit and update existing notes with ease.</p>
+
+<br>
+
+ <p>Delete Notes</p>
+  <p> ◉ Remove notes permanently.</p>
+
+<br>
+
+ <p>Note Text Editing</p>
+  <p> ◉ Style notes using a built-in toolbar text editor.</p>
+
+<br>
+
+### Cross-Device Sync
+
+ <p>Firebase Integration</p>
+  <p> ◉ All notes are securely saved in Firebase, allowing access from any device after logging in.</p>
+
+<br>
+
+### User Profile
+
+ <p>Profile Information</p>
+  <p> ◉ View user information, including email and the number of notes.</p>
+
+<br>
+
+ <p>Account Management</p>
+  <p> ◉ Clear all notes from the account.</p>
+  <p> ◉ Delete the user account after password confirmation.</p>
+
+<br>
+
+### Application Settings
+
+ <p>App Drawer</p>
+  <p> ◉ Sign out from the account.</p>
+  <p> ◉ Navigate to the user profile.</p>
+  <p> ◉ Switch between light and dark themes.</p>
+  <p> ◉ Toggle between list and grid views for note display.</p>
+  <p> ◉ Exit the application.</p>
+
+<br>
